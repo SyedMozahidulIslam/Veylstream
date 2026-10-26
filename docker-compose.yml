@@ -1,0 +1,11 @@
+# UNVERIFIED (no Docker in the build environment). Local profile: one container, SQLite + file log on a volume.
+# First run:  docker compose run --rm veylstream python -m veylstream setup-demo   (prints a one-time admin password)
+services:
+  veylstream:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      VEYLSTREAM_FSYNC: "1"
+    volumes: ["veyl-data:/data"]
+volumes:
+  veyl-data:

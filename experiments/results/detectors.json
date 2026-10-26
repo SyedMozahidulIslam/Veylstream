@@ -1,0 +1,1993 @@
+{
+ "benchmark": "detectors",
+ "repeats": 3,
+ "scenarios": "failure_spike(payments,eu-west) + latency_degradation(checkout) + traffic_drop(global)",
+ "environment": {
+  "python": "3.12.3",
+  "numpy": "2.4.4",
+  "cpus": 1,
+  "machine": "x86_64",
+  "system": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+  "veylstream": "0.1.0"
+ },
+ "summary": {
+  "rule": {
+   "precision": {
+    "mean": 0.9068440709617182,
+    "min": 0.89,
+    "max": 0.9285714285714286
+   },
+   "recall": {
+    "mean": 0.7083333333333334,
+    "min": 0.6953125,
+    "max": 0.71875
+   },
+   "f1": {
+    "mean": 0.7953371629664131,
+    "min": 0.7807017543859649,
+    "max": 0.8053097345132744
+   },
+   "fpr": {
+    "mean": 0.0029535864978902956,
+    "min": 0.0022151898734177216,
+    "max": 0.003481012658227848
+   },
+   "incidents_detected": [
+    3,
+    3,
+    3
+   ]
+  },
+  "zscore": {
+   "precision": {
+    "mean": 0.7196054884566531,
+    "min": 0.6993464052287581,
+    "max": 0.7516778523489933
+   },
+   "recall": {
+    "mean": 0.8541666666666666,
+    "min": 0.8359375,
+    "max": 0.875
+   },
+   "f1": {
+    "mean": 0.7810932472056004,
+    "min": 0.7615658362989324,
+    "max": 0.8086642599277979
+   },
+   "fpr": {
+    "mean": 0.01350210970464135,
+    "min": 0.01170886075949367,
+    "max": 0.014556962025316455
+   },
+   "incidents_detected": [
+    3,
+    3,
+    3
+   ]
+  },
+  "mad": {
+   "precision": {
+    "mean": 0.7394380747276242,
+    "min": 0.7310344827586207,
+    "max": 0.7553956834532374
+   },
+   "recall": {
+    "mean": 0.8125,
+    "min": 0.7890625,
+    "max": 0.828125
+   },
+   "f1": {
+    "mean": 0.774157375576654,
+    "min": 0.7593984962406015,
+    "max": 0.7865168539325842
+   },
+   "fpr": {
+    "mean": 0.011603375527426163,
+    "min": 0.010759493670886076,
+    "max": 0.012341772151898734
+   },
+   "incidents_detected": [
+    3,
+    3,
+    3
+   ]
+  },
+  "iqr": {
+   "precision": {
+    "mean": 0.7244568938686586,
+    "min": 0.7124183006535948,
+    "max": 0.7466666666666667
+   },
+   "recall": {
+    "mean": 0.8619791666666666,
+    "min": 0.8515625,
+    "max": 0.875
+   },
+   "f1": {
+    "mean": 0.7872326504662855,
+    "min": 0.7758007117437722,
+    "max": 0.8057553956834532
+   },
+   "fpr": {
+    "mean": 0.013291139240506329,
+    "min": 0.012025316455696202,
+    "max": 0.013924050632911392
+   },
+   "incidents_detected": [
+    3,
+    3,
+    3
+   ]
+  },
+  "baseline_deviation": {
+   "precision": {
+    "mean": 0.49508430177487733,
+    "min": 0.48068669527896996,
+    "max": 0.5068493150684932
+   },
+   "recall": {
+    "mean": 0.8645833333333334,
+    "min": 0.8515625,
+    "max": 0.875
+   },
+   "f1": {
+    "mean": 0.6295033807786568,
+    "min": 0.6204986149584488,
+    "max": 0.6397694524495677
+   },
+   "fpr": {
+    "mean": 0.03575949367088607,
+    "min": 0.03417721518987342,
+    "max": 0.03829113924050633
+   },
+   "incidents_detected": [
+    3,
+    3,
+    3
+   ]
+  },
+  "rate_of_change": {
+   "precision": {
+    "mean": 0.3101375148619243,
+    "min": 0.29133858267716534,
+    "max": 0.3228346456692913
+   },
+   "recall": {
+    "mean": 0.2994791666666667,
+    "min": 0.2890625,
+    "max": 0.3203125
+   },
+   "f1": {
+    "mean": 0.30460184073629454,
+    "min": 0.2901960784313726,
+    "max": 0.3215686274509804
+   },
+   "fpr": {
+    "mean": 0.0270042194092827,
+    "min": 0.02531645569620253,
+    "max": 0.028481012658227847
+   },
+   "incidents_detected": [
+    3,
+    3,
+    3
+   ]
+  },
+  "isolation_forest": {
+   "precision": {
+    "mean": 0.21950716313461413,
+    "min": 0.21296296296296297,
+    "max": 0.23232323232323232
+   },
+   "recall": {
+    "mean": 0.1953125,
+    "min": 0.1796875,
+    "max": 0.2265625
+   },
+   "f1": {
+    "mean": 0.20575179858014173,
+    "min": 0.19491525423728812,
+    "max": 0.21969696969696967
+   },
+   "fpr": {
+    "mean": 0.02827004219409283,
+    "min": 0.024050632911392405,
+    "max": 0.033860759493670886
+   },
+   "incidents_detected": [
+    1,
+    2,
+    1
+   ]
+  }
+ },
+ "runs": [
+  {
+   "seed": 11,
+   "dataset_sha256": "7c8c9ad6fbc9445c35e72c7d8f48f6f2ad84a352855248cbd5d9be62f7c65663",
+   "results": {
+    "dataset": {
+     "id": "ds_511c0175d260",
+     "name": "bench",
+     "sha256": "7c8c9ad6fbc9445c35e72c7d8f48f6f2ad84a352855248cbd5d9be62f7c65663",
+     "events": 95483,
+     "ts_min": 1790000000.0,
+     "ts_max": 1790003899.979,
+     "simulated": true
+    },
+    "detectors": [
+     {
+      "name": "rule",
+      "version": "1.1.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "txn_failure_rate"
+       ],
+       "scopes": null
+      }
+     },
+     {
+      "name": "zscore",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 4.0
+      }
+     },
+     {
+      "name": "mad",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 5.0
+      }
+     },
+     {
+      "name": "iqr",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "k": 3.0
+      }
+     },
+     {
+      "name": "baseline_deviation",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "tolerance": 0.5
+      }
+     },
+     {
+      "name": "rate_of_change",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 5,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 0.6,
+       "lookback": 3
+      }
+     },
+     {
+      "name": "isolation_forest",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "features": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms",
+        "unique_entities"
+       ],
+       "n_estimators": 150,
+       "contamination": 0.01,
+       "min_train": 40,
+       "retrain_every": 240,
+       "max_history": 1500,
+       "random_state": 11,
+       "max_excluded": 30,
+       "threshold_margin": 1.05
+      }
+     }
+    ],
+    "feature_definitions": {
+     "isolation_forest": [
+      "event_rate",
+      "txn_failure_rate",
+      "http_error_rate",
+      "latency_p95_ms",
+      "latency_mean_ms",
+      "unique_entities"
+     ],
+     "univariate_metrics": [
+      "event_rate",
+      "txn_failure_rate",
+      "http_error_rate",
+      "latency_p95_ms",
+      "latency_mean_ms"
+     ]
+    },
+    "evaluation": {
+     "scored_units": 3288,
+     "eval_start": 1790001150.0,
+     "windows_total": 131,
+     "windows_scored": 92,
+     "detectors": {
+      "rule": {
+       "detections_total": 114,
+       "flagged_units": 102,
+       "flag_rate": 0.03102189781021898,
+       "mean_score": 1.514090350877193,
+       "by_severity": {
+        "low": 0,
+        "medium": 89,
+        "high": 0,
+        "critical": 25
+       },
+       "tp": 92,
+       "fp": 10,
+       "fn": 36,
+       "tn": 3150,
+       "precision": 0.9019607843137255,
+       "recall": 0.71875,
+       "f1": 0.8,
+       "tpr": 0.71875,
+       "fpr": 0.0031645569620253164,
+       "confusion_matrix": [
+        [
+         3150,
+         10
+        ],
+        [
+         36,
+         92
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "zscore": {
+       "detections_total": 209,
+       "flagged_units": 149,
+       "flag_rate": 0.04531630170316302,
+       "mean_score": 5.474052631578948,
+       "by_severity": {
+        "low": 27,
+        "medium": 34,
+        "high": 46,
+        "critical": 102
+       },
+       "tp": 112,
+       "fp": 37,
+       "fn": 16,
+       "tn": 3123,
+       "precision": 0.7516778523489933,
+       "recall": 0.875,
+       "f1": 0.8086642599277979,
+       "tpr": 0.875,
+       "fpr": 0.01170886075949367,
+       "confusion_matrix": [
+        [
+         3123,
+         37
+        ],
+        [
+         16,
+         112
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "mad": {
+       "detections_total": 199,
+       "flagged_units": 139,
+       "flag_rate": 0.04227493917274939,
+       "mean_score": 4.644280904522613,
+       "by_severity": {
+        "low": 30,
+        "medium": 37,
+        "high": 38,
+        "critical": 94
+       },
+       "tp": 105,
+       "fp": 34,
+       "fn": 23,
+       "tn": 3126,
+       "precision": 0.7553956834532374,
+       "recall": 0.8203125,
+       "f1": 0.7865168539325842,
+       "tpr": 0.8203125,
+       "fpr": 0.010759493670886076,
+       "confusion_matrix": [
+        [
+         3126,
+         34
+        ],
+        [
+         23,
+         105
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "iqr": {
+       "detections_total": 210,
+       "flagged_units": 150,
+       "flag_rate": 0.04562043795620438,
+       "mean_score": 6.248985714285714,
+       "by_severity": {
+        "low": 24,
+        "medium": 38,
+        "high": 34,
+        "critical": 114
+       },
+       "tp": 112,
+       "fp": 38,
+       "fn": 16,
+       "tn": 3122,
+       "precision": 0.7466666666666667,
+       "recall": 0.875,
+       "f1": 0.8057553956834532,
+       "tpr": 0.875,
+       "fpr": 0.012025316455696202,
+       "confusion_matrix": [
+        [
+         3122,
+         38
+        ],
+        [
+         16,
+         112
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "baseline_deviation": {
+       "detections_total": 304,
+       "flagged_units": 219,
+       "flag_rate": 0.0666058394160584,
+       "mean_score": 4.6800013157894735,
+       "by_severity": {
+        "low": 6,
+        "medium": 109,
+        "high": 47,
+        "critical": 142
+       },
+       "tp": 111,
+       "fp": 108,
+       "fn": 17,
+       "tn": 3052,
+       "precision": 0.5068493150684932,
+       "recall": 0.8671875,
+       "f1": 0.6397694524495677,
+       "tpr": 0.8671875,
+       "fpr": 0.03417721518987342,
+       "confusion_matrix": [
+        [
+         3052,
+         108
+        ],
+        [
+         17,
+         111
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "rate_of_change": {
+       "detections_total": 161,
+       "flagged_units": 127,
+       "flag_rate": 0.03862530413625304,
+       "mean_score": 3.235151552795031,
+       "by_severity": {
+        "low": 37,
+        "medium": 27,
+        "high": 55,
+        "critical": 42
+       },
+       "tp": 37,
+       "fp": 90,
+       "fn": 91,
+       "tn": 3070,
+       "precision": 0.29133858267716534,
+       "recall": 0.2890625,
+       "f1": 0.2901960784313726,
+       "tpr": 0.2890625,
+       "fpr": 0.028481012658227847,
+       "confusion_matrix": [
+        [
+         3070,
+         90
+        ],
+        [
+         91,
+         37
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "isolation_forest": {
+       "detections_total": 23,
+       "flagged_units": 108,
+       "flag_rate": 0.032846715328467155,
+       "mean_score": 1.0939608695652174,
+       "by_severity": {
+        "low": 23,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+       },
+       "tp": 23,
+       "fp": 85,
+       "fn": 105,
+       "tn": 3075,
+       "precision": 0.21296296296296297,
+       "recall": 0.1796875,
+       "f1": 0.19491525423728812,
+       "tpr": 0.1796875,
+       "fpr": 0.02689873417721519,
+       "confusion_matrix": [
+        [
+         3075,
+         85
+        ],
+        [
+         105,
+         23
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 1,
+       "detection_delay_s": {
+        "mean": 40.0,
+        "median": 40.0,
+        "per_incident": [
+         40.0
+        ]
+       },
+       "missed_incidents": [
+        {
+         "kind": "failure_spike",
+         "start": 1790002000.0,
+         "entities": [
+          "service:payments",
+          "region:eu-west"
+         ]
+        },
+        {
+         "kind": "latency_degradation",
+         "start": 1790002800.0,
+         "entities": [
+          "service:checkout"
+         ]
+        }
+       ]
+      }
+     },
+     "agreement_jaccard": {
+      "rule": {
+       "rule": 1.0,
+       "zscore": 0.6513157894736842,
+       "mad": 0.6853146853146853,
+       "iqr": 0.6470588235294118,
+       "baseline_deviation": 0.44594594594594594,
+       "rate_of_change": 0.12807881773399016,
+       "isolation_forest": 0.12299465240641712
+      },
+      "zscore": {
+       "rule": 0.6513157894736842,
+       "zscore": 1.0,
+       "mad": 0.9328859060402684,
+       "iqr": 0.9671052631578947,
+       "baseline_deviation": 0.5862068965517241,
+       "rate_of_change": 0.1694915254237288,
+       "isolation_forest": 0.10775862068965517
+      },
+      "mad": {
+       "rule": 0.6853146853146853,
+       "zscore": 0.9328859060402684,
+       "mad": 1.0,
+       "iqr": 0.9266666666666666,
+       "baseline_deviation": 0.5770925110132159,
+       "rate_of_change": 0.1565217391304348,
+       "isolation_forest": 0.11261261261261261
+      },
+      "iqr": {
+       "rule": 0.6470588235294118,
+       "zscore": 0.9671052631578947,
+       "mad": 0.9266666666666666,
+       "iqr": 1.0,
+       "baseline_deviation": 0.6043478260869565,
+       "rate_of_change": 0.16877637130801687,
+       "isolation_forest": 0.1072961373390558
+      },
+      "baseline_deviation": {
+       "rule": 0.44594594594594594,
+       "zscore": 0.5862068965517241,
+       "mad": 0.5770925110132159,
+       "iqr": 0.6043478260869565,
+       "baseline_deviation": 1.0,
+       "rate_of_change": 0.373015873015873,
+       "isolation_forest": 0.10847457627118644
+      },
+      "rate_of_change": {
+       "rule": 0.12807881773399016,
+       "zscore": 0.1694915254237288,
+       "mad": 0.1565217391304348,
+       "iqr": 0.16877637130801687,
+       "baseline_deviation": 0.373015873015873,
+       "rate_of_change": 1.0,
+       "isolation_forest": 0.0779816513761468
+      },
+      "isolation_forest": {
+       "rule": 0.12299465240641712,
+       "zscore": 0.10775862068965517,
+       "mad": 0.11261261261261261,
+       "iqr": 0.1072961373390558,
+       "baseline_deviation": 0.10847457627118644,
+       "rate_of_change": 0.0779816513761468,
+       "isolation_forest": 1.0
+      }
+     },
+     "labels_available": true
+    },
+    "performance": {
+     "aggregation_events_per_s": 56949.77946237884,
+     "detector_ms_per_window": {
+      "rule": 0.04834094084164249,
+      "zscore": 0.11224702862542986,
+      "mad": 0.1967110181295627,
+      "iqr": 0.2885361297696106,
+      "baseline_deviation": 0.11592754866355816,
+      "rate_of_change": 0.05725272423653122,
+      "isolation_forest": 8.139185989503485
+     },
+     "windows": 1048,
+     "late_dropped": 0,
+     "environment": {
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "machine": "x86_64",
+      "cpus": 1
+     }
+    },
+    "limitations": [
+     "Window-level scoring on synthetic data: results do not transfer automatically to real traffic.",
+     "Detector thresholds are defaults, not tuned per dataset; no hyper-parameter search was performed.",
+     "Performance numbers come from a single run on the stated machine and include Python overhead.",
+     "Ground truth comes from injected scenarios; scenario boundaries are idealised."
+    ],
+    "reproducibility": {
+     "experiment_id": "ex_3a88da4a7e35",
+     "config_sha256": "9c7dca92bb09091e9b48d9da759397a5827fb65d3c0a541dda28a00e046a5870",
+     "seed": 11,
+     "software_version": "0.1.0",
+     "library_versions": {
+      "numpy": "2.4.4",
+      "sklearn": "1.8.0"
+     }
+    }
+   }
+  },
+  {
+   "seed": 12,
+   "dataset_sha256": "bc3236d695a97c8bcb137d5f2d56fca728e72d4694b8696bb45996bb2a5c7550",
+   "results": {
+    "dataset": {
+     "id": "ds_ff26c30204e4",
+     "name": "bench",
+     "sha256": "bc3236d695a97c8bcb137d5f2d56fca728e72d4694b8696bb45996bb2a5c7550",
+     "events": 95397,
+     "ts_min": 1790000000.0,
+     "ts_max": 1790003899.989,
+     "simulated": true
+    },
+    "detectors": [
+     {
+      "name": "rule",
+      "version": "1.1.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "txn_failure_rate"
+       ],
+       "scopes": null
+      }
+     },
+     {
+      "name": "zscore",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 4.0
+      }
+     },
+     {
+      "name": "mad",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 5.0
+      }
+     },
+     {
+      "name": "iqr",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "k": 3.0
+      }
+     },
+     {
+      "name": "baseline_deviation",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "tolerance": 0.5
+      }
+     },
+     {
+      "name": "rate_of_change",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 5,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 0.6,
+       "lookback": 3
+      }
+     },
+     {
+      "name": "isolation_forest",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "features": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms",
+        "unique_entities"
+       ],
+       "n_estimators": 150,
+       "contamination": 0.01,
+       "min_train": 40,
+       "retrain_every": 240,
+       "max_history": 1500,
+       "random_state": 12,
+       "max_excluded": 30,
+       "threshold_margin": 1.05
+      }
+     }
+    ],
+    "feature_definitions": {
+     "isolation_forest": [
+      "event_rate",
+      "txn_failure_rate",
+      "http_error_rate",
+      "latency_p95_ms",
+      "latency_mean_ms",
+      "unique_entities"
+     ],
+     "univariate_metrics": [
+      "event_rate",
+      "txn_failure_rate",
+      "http_error_rate",
+      "latency_p95_ms",
+      "latency_mean_ms"
+     ]
+    },
+    "evaluation": {
+     "scored_units": 3288,
+     "eval_start": 1790001150.0,
+     "windows_total": 131,
+     "windows_scored": 92,
+     "detectors": {
+      "rule": {
+       "detections_total": 101,
+       "flagged_units": 98,
+       "flag_rate": 0.029805352798053526,
+       "mean_score": 1.5681445544554455,
+       "by_severity": {
+        "low": 0,
+        "medium": 78,
+        "high": 0,
+        "critical": 23
+       },
+       "tp": 91,
+       "fp": 7,
+       "fn": 37,
+       "tn": 3153,
+       "precision": 0.9285714285714286,
+       "recall": 0.7109375,
+       "f1": 0.8053097345132744,
+       "tpr": 0.7109375,
+       "fpr": 0.0022151898734177216,
+       "confusion_matrix": [
+        [
+         3153,
+         7
+        ],
+        [
+         37,
+         91
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "zscore": {
+       "detections_total": 214,
+       "flagged_units": 153,
+       "flag_rate": 0.046532846715328466,
+       "mean_score": 5.266985981308412,
+       "by_severity": {
+        "low": 30,
+        "medium": 39,
+        "high": 40,
+        "critical": 105
+       },
+       "tp": 107,
+       "fp": 46,
+       "fn": 21,
+       "tn": 3114,
+       "precision": 0.6993464052287581,
+       "recall": 0.8359375,
+       "f1": 0.7615658362989324,
+       "tpr": 0.8359375,
+       "fpr": 0.014556962025316455,
+       "confusion_matrix": [
+        [
+         3114,
+         46
+        ],
+        [
+         21,
+         107
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "mad": {
+       "detections_total": 198,
+       "flagged_units": 138,
+       "flag_rate": 0.041970802919708027,
+       "mean_score": 4.462033838383839,
+       "by_severity": {
+        "low": 28,
+        "medium": 43,
+        "high": 38,
+        "critical": 89
+       },
+       "tp": 101,
+       "fp": 37,
+       "fn": 27,
+       "tn": 3123,
+       "precision": 0.7318840579710145,
+       "recall": 0.7890625,
+       "f1": 0.7593984962406015,
+       "tpr": 0.7890625,
+       "fpr": 0.01170886075949367,
+       "confusion_matrix": [
+        [
+         3123,
+         37
+        ],
+        [
+         27,
+         101
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "iqr": {
+       "detections_total": 214,
+       "flagged_units": 153,
+       "flag_rate": 0.046532846715328466,
+       "mean_score": 6.010478971962617,
+       "by_severity": {
+        "low": 20,
+        "medium": 39,
+        "high": 48,
+        "critical": 107
+       },
+       "tp": 109,
+       "fp": 44,
+       "fn": 19,
+       "tn": 3116,
+       "precision": 0.7124183006535948,
+       "recall": 0.8515625,
+       "f1": 0.7758007117437722,
+       "tpr": 0.8515625,
+       "fpr": 0.013924050632911392,
+       "confusion_matrix": [
+        [
+         3116,
+         44
+        ],
+        [
+         19,
+         109
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "baseline_deviation": {
+       "detections_total": 324,
+       "flagged_units": 233,
+       "flag_rate": 0.07086374695863747,
+       "mean_score": 4.826779320987654,
+       "by_severity": {
+        "low": 3,
+        "medium": 116,
+        "high": 71,
+        "critical": 134
+       },
+       "tp": 112,
+       "fp": 121,
+       "fn": 16,
+       "tn": 3039,
+       "precision": 0.48068669527896996,
+       "recall": 0.875,
+       "f1": 0.6204986149584488,
+       "tpr": 0.875,
+       "fpr": 0.03829113924050633,
+       "confusion_matrix": [
+        [
+         3039,
+         121
+        ],
+        [
+         16,
+         112
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "rate_of_change": {
+       "detections_total": 174,
+       "flagged_units": 127,
+       "flag_rate": 0.03862530413625304,
+       "mean_score": 3.2495977011494244,
+       "by_severity": {
+        "low": 31,
+        "medium": 44,
+        "high": 48,
+        "critical": 51
+       },
+       "tp": 41,
+       "fp": 86,
+       "fn": 87,
+       "tn": 3074,
+       "precision": 0.3228346456692913,
+       "recall": 0.3203125,
+       "f1": 0.3215686274509804,
+       "tpr": 0.3203125,
+       "fpr": 0.02721518987341772,
+       "confusion_matrix": [
+        [
+         3074,
+         86
+        ],
+        [
+         87,
+         41
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "isolation_forest": {
+       "detections_total": 21,
+       "flagged_units": 99,
+       "flag_rate": 0.030109489051094892,
+       "mean_score": 1.1352333333333333,
+       "by_severity": {
+        "low": 21,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+       },
+       "tp": 23,
+       "fp": 76,
+       "fn": 105,
+       "tn": 3084,
+       "precision": 0.23232323232323232,
+       "recall": 0.1796875,
+       "f1": 0.2026431718061674,
+       "tpr": 0.1796875,
+       "fpr": 0.024050632911392405,
+       "confusion_matrix": [
+        [
+         3084,
+         76
+        ],
+        [
+         105,
+         23
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 2,
+       "detection_delay_s": {
+        "mean": 150.0,
+        "median": 150.0,
+        "per_incident": [
+         260.0,
+         40.0
+        ]
+       },
+       "missed_incidents": [
+        {
+         "kind": "latency_degradation",
+         "start": 1790002800.0,
+         "entities": [
+          "service:checkout"
+         ]
+        }
+       ]
+      }
+     },
+     "agreement_jaccard": {
+      "rule": {
+       "rule": 1.0,
+       "zscore": 0.6089743589743589,
+       "mad": 0.6737588652482269,
+       "iqr": 0.6089743589743589,
+       "baseline_deviation": 0.4025423728813559,
+       "rate_of_change": 0.15979381443298968,
+       "isolation_forest": 0.11931818181818182
+      },
+      "zscore": {
+       "rule": 0.6089743589743589,
+       "zscore": 1.0,
+       "mad": 0.9019607843137255,
+       "iqr": 0.9245283018867925,
+       "baseline_deviation": 0.5819672131147541,
+       "rate_of_change": 0.19148936170212766,
+       "isolation_forest": 0.11013215859030837
+      },
+      "mad": {
+       "rule": 0.6737588652482269,
+       "zscore": 0.9019607843137255,
+       "mad": 1.0,
+       "iqr": 0.9019607843137255,
+       "baseline_deviation": 0.5654008438818565,
+       "rate_of_change": 0.17777777777777778,
+       "isolation_forest": 0.11267605633802817
+      },
+      "iqr": {
+       "rule": 0.6089743589743589,
+       "zscore": 0.9245283018867925,
+       "mad": 0.9019607843137255,
+       "iqr": 1.0,
+       "baseline_deviation": 0.6016597510373444,
+       "rate_of_change": 0.19148936170212766,
+       "isolation_forest": 0.11504424778761062
+      },
+      "baseline_deviation": {
+       "rule": 0.4025423728813559,
+       "zscore": 0.5819672131147541,
+       "mad": 0.5654008438818565,
+       "iqr": 0.6016597510373444,
+       "baseline_deviation": 1.0,
+       "rate_of_change": 0.3688212927756654,
+       "isolation_forest": 0.10299003322259136
+      },
+      "rate_of_change": {
+       "rule": 0.15979381443298968,
+       "zscore": 0.19148936170212766,
+       "mad": 0.17777777777777778,
+       "iqr": 0.19148936170212766,
+       "baseline_deviation": 0.3688212927756654,
+       "rate_of_change": 1.0,
+       "isolation_forest": 0.056074766355140186
+      },
+      "isolation_forest": {
+       "rule": 0.11931818181818182,
+       "zscore": 0.11013215859030837,
+       "mad": 0.11267605633802817,
+       "iqr": 0.11504424778761062,
+       "baseline_deviation": 0.10299003322259136,
+       "rate_of_change": 0.056074766355140186,
+       "isolation_forest": 1.0
+      }
+     },
+     "labels_available": true
+    },
+    "performance": {
+     "aggregation_events_per_s": 59513.95739486852,
+     "detector_ms_per_window": {
+      "rule": 0.046421669847811285,
+      "zscore": 0.11051849618294383,
+      "mad": 0.18751466793840957,
+      "iqr": 0.2798769713738299,
+      "baseline_deviation": 0.1110958501906134,
+      "rate_of_change": 0.05649549618337802,
+      "isolation_forest": 7.0577549475190535
+     },
+     "windows": 1048,
+     "late_dropped": 0,
+     "environment": {
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "machine": "x86_64",
+      "cpus": 1
+     }
+    },
+    "limitations": [
+     "Window-level scoring on synthetic data: results do not transfer automatically to real traffic.",
+     "Detector thresholds are defaults, not tuned per dataset; no hyper-parameter search was performed.",
+     "Performance numbers come from a single run on the stated machine and include Python overhead.",
+     "Ground truth comes from injected scenarios; scenario boundaries are idealised."
+    ],
+    "reproducibility": {
+     "experiment_id": "ex_77db0efdf98c",
+     "config_sha256": "d930ee7f2cce5d1383feefa5e3fe03b3d8d867de0caab938b5575394c408fe97",
+     "seed": 12,
+     "software_version": "0.1.0",
+     "library_versions": {
+      "numpy": "2.4.4",
+      "sklearn": "1.8.0"
+     }
+    }
+   }
+  },
+  {
+   "seed": 13,
+   "dataset_sha256": "8c42e243386ca18e7c7ad23428995aa56268df1d07f37a5290b336f69f93c302",
+   "results": {
+    "dataset": {
+     "id": "ds_9e25c51fbbc1",
+     "name": "bench",
+     "sha256": "8c42e243386ca18e7c7ad23428995aa56268df1d07f37a5290b336f69f93c302",
+     "events": 95373,
+     "ts_min": 1790000000.0,
+     "ts_max": 1790003899.959,
+     "simulated": true
+    },
+    "detectors": [
+     {
+      "name": "rule",
+      "version": "1.1.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "txn_failure_rate"
+       ],
+       "scopes": null
+      }
+     },
+     {
+      "name": "zscore",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 4.0
+      }
+     },
+     {
+      "name": "mad",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 5.0
+      }
+     },
+     {
+      "name": "iqr",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "k": 3.0
+      }
+     },
+     {
+      "name": "baseline_deviation",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 20,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "tolerance": 0.5
+      }
+     },
+     {
+      "name": "rate_of_change",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "baseline_windows": 60,
+       "min_samples": 5,
+       "max_excluded": 30,
+       "rel_floor": 0.05,
+       "threshold": 0.6,
+       "lookback": 3
+      }
+     },
+     {
+      "name": "isolation_forest",
+      "version": "1.0.0",
+      "config": {
+       "metrics": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms"
+       ],
+       "scopes": null,
+       "features": [
+        "event_rate",
+        "txn_failure_rate",
+        "http_error_rate",
+        "latency_p95_ms",
+        "latency_mean_ms",
+        "unique_entities"
+       ],
+       "n_estimators": 150,
+       "contamination": 0.01,
+       "min_train": 40,
+       "retrain_every": 240,
+       "max_history": 1500,
+       "random_state": 13,
+       "max_excluded": 30,
+       "threshold_margin": 1.05
+      }
+     }
+    ],
+    "feature_definitions": {
+     "isolation_forest": [
+      "event_rate",
+      "txn_failure_rate",
+      "http_error_rate",
+      "latency_p95_ms",
+      "latency_mean_ms",
+      "unique_entities"
+     ],
+     "univariate_metrics": [
+      "event_rate",
+      "txn_failure_rate",
+      "http_error_rate",
+      "latency_p95_ms",
+      "latency_mean_ms"
+     ]
+    },
+    "evaluation": {
+     "scored_units": 3288,
+     "eval_start": 1790001150.0,
+     "windows_total": 131,
+     "windows_scored": 92,
+     "detectors": {
+      "rule": {
+       "detections_total": 109,
+       "flagged_units": 100,
+       "flag_rate": 0.030413625304136254,
+       "mean_score": 1.5058935779816514,
+       "by_severity": {
+        "low": 0,
+        "medium": 92,
+        "high": 0,
+        "critical": 17
+       },
+       "tp": 89,
+       "fp": 11,
+       "fn": 39,
+       "tn": 3149,
+       "precision": 0.89,
+       "recall": 0.6953125,
+       "f1": 0.7807017543859649,
+       "tpr": 0.6953125,
+       "fpr": 0.003481012658227848,
+       "confusion_matrix": [
+        [
+         3149,
+         11
+        ],
+        [
+         39,
+         89
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "zscore": {
+       "detections_total": 215,
+       "flagged_units": 154,
+       "flag_rate": 0.04683698296836983,
+       "mean_score": 5.344178604651162,
+       "by_severity": {
+        "low": 35,
+        "medium": 31,
+        "high": 48,
+        "critical": 101
+       },
+       "tp": 109,
+       "fp": 45,
+       "fn": 19,
+       "tn": 3115,
+       "precision": 0.7077922077922078,
+       "recall": 0.8515625,
+       "f1": 0.7730496453900709,
+       "tpr": 0.8515625,
+       "fpr": 0.014240506329113924,
+       "confusion_matrix": [
+        [
+         3115,
+         45
+        ],
+        [
+         19,
+         109
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "mad": {
+       "detections_total": 205,
+       "flagged_units": 145,
+       "flag_rate": 0.04409975669099757,
+       "mean_score": 4.488529756097561,
+       "by_severity": {
+        "low": 36,
+        "medium": 39,
+        "high": 43,
+        "critical": 87
+       },
+       "tp": 106,
+       "fp": 39,
+       "fn": 22,
+       "tn": 3121,
+       "precision": 0.7310344827586207,
+       "recall": 0.828125,
+       "f1": 0.7765567765567765,
+       "tpr": 0.828125,
+       "fpr": 0.012341772151898734,
+       "confusion_matrix": [
+        [
+         3121,
+         39
+        ],
+        [
+         22,
+         106
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "iqr": {
+       "detections_total": 214,
+       "flagged_units": 154,
+       "flag_rate": 0.04683698296836983,
+       "mean_score": 6.2711500000000004,
+       "by_severity": {
+        "low": 27,
+        "medium": 38,
+        "high": 42,
+        "critical": 107
+       },
+       "tp": 110,
+       "fp": 44,
+       "fn": 18,
+       "tn": 3116,
+       "precision": 0.7142857142857143,
+       "recall": 0.859375,
+       "f1": 0.7801418439716311,
+       "tpr": 0.859375,
+       "fpr": 0.013924050632911392,
+       "confusion_matrix": [
+        [
+         3116,
+         44
+        ],
+        [
+         18,
+         110
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 20.0,
+        "median": 20.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         10.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "baseline_deviation": {
+       "detections_total": 300,
+       "flagged_units": 219,
+       "flag_rate": 0.0666058394160584,
+       "mean_score": 4.536076333333334,
+       "by_severity": {
+        "low": 7,
+        "medium": 103,
+        "high": 65,
+        "critical": 125
+       },
+       "tp": 109,
+       "fp": 110,
+       "fn": 19,
+       "tn": 3050,
+       "precision": 0.4977168949771689,
+       "recall": 0.8515625,
+       "f1": 0.6282420749279539,
+       "tpr": 0.8515625,
+       "fpr": 0.03481012658227848,
+       "confusion_matrix": [
+        [
+         3050,
+         110
+        ],
+        [
+         19,
+         109
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "rate_of_change": {
+       "detections_total": 161,
+       "flagged_units": 117,
+       "flag_rate": 0.035583941605839414,
+       "mean_score": 3.0873577639751555,
+       "by_severity": {
+        "low": 36,
+        "medium": 36,
+        "high": 48,
+        "critical": 41
+       },
+       "tp": 37,
+       "fp": 80,
+       "fn": 91,
+       "tn": 3080,
+       "precision": 0.3162393162393162,
+       "recall": 0.2890625,
+       "f1": 0.3020408163265306,
+       "tpr": 0.2890625,
+       "fpr": 0.02531645569620253,
+       "confusion_matrix": [
+        [
+         3080,
+         80
+        ],
+        [
+         91,
+         37
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 3,
+       "detection_delay_s": {
+        "mean": 30.0,
+        "median": 30.0,
+        "per_incident": [
+         20.0,
+         30.0,
+         40.0
+        ]
+       },
+       "missed_incidents": []
+      },
+      "isolation_forest": {
+       "detections_total": 29,
+       "flagged_units": 136,
+       "flag_rate": 0.0413625304136253,
+       "mean_score": 1.1520862068965516,
+       "by_severity": {
+        "low": 29,
+        "medium": 0,
+        "high": 0,
+        "critical": 0
+       },
+       "tp": 29,
+       "fp": 107,
+       "fn": 99,
+       "tn": 3053,
+       "precision": 0.21323529411764705,
+       "recall": 0.2265625,
+       "f1": 0.21969696969696967,
+       "tpr": 0.2265625,
+       "fpr": 0.033860759493670886,
+       "confusion_matrix": [
+        [
+         3053,
+         107
+        ],
+        [
+         99,
+         29
+        ]
+       ],
+       "incidents_total": 3,
+       "incidents_detected": 1,
+       "detection_delay_s": {
+        "mean": 40.0,
+        "median": 40.0,
+        "per_incident": [
+         40.0
+        ]
+       },
+       "missed_incidents": [
+        {
+         "kind": "failure_spike",
+         "start": 1790002000.0,
+         "entities": [
+          "service:payments",
+          "region:eu-west"
+         ]
+        },
+        {
+         "kind": "latency_degradation",
+         "start": 1790002800.0,
+         "entities": [
+          "service:checkout"
+         ]
+        }
+       ]
+      }
+     },
+     "agreement_jaccard": {
+      "rule": {
+       "rule": 1.0,
+       "zscore": 0.5679012345679012,
+       "mad": 0.5909090909090909,
+       "iqr": 0.558282208588957,
+       "baseline_deviation": 0.4052863436123348,
+       "rate_of_change": 0.15425531914893617,
+       "isolation_forest": 0.14009661835748793
+      },
+      "zscore": {
+       "rule": 0.5679012345679012,
+       "zscore": 1.0,
+       "mad": 0.9415584415584416,
+       "iqr": 0.9617834394904459,
+       "baseline_deviation": 0.5672268907563025,
+       "rate_of_change": 0.18340611353711792,
+       "isolation_forest": 0.13725490196078433
+      },
+      "mad": {
+       "rule": 0.5909090909090909,
+       "zscore": 0.9415584415584416,
+       "mad": 1.0,
+       "iqr": 0.9166666666666666,
+       "baseline_deviation": 0.5689655172413793,
+       "rate_of_change": 0.18552036199095023,
+       "isolation_forest": 0.1285140562248996
+      },
+      "iqr": {
+       "rule": 0.558282208588957,
+       "zscore": 0.9617834394904459,
+       "mad": 0.9166666666666666,
+       "iqr": 1.0,
+       "baseline_deviation": 0.5672268907563025,
+       "rate_of_change": 0.1782608695652174,
+       "isolation_forest": 0.1328125
+      },
+      "baseline_deviation": {
+       "rule": 0.4052863436123348,
+       "zscore": 0.5672268907563025,
+       "mad": 0.5689655172413793,
+       "iqr": 0.5672268907563025,
+       "baseline_deviation": 1.0,
+       "rate_of_change": 0.3386454183266932,
+       "isolation_forest": 0.134185303514377
+      },
+      "rate_of_change": {
+       "rule": 0.15425531914893617,
+       "zscore": 0.18340611353711792,
+       "mad": 0.18552036199095023,
+       "iqr": 0.1782608695652174,
+       "baseline_deviation": 0.3386454183266932,
+       "rate_of_change": 1.0,
+       "isolation_forest": 0.058577405857740586
+      },
+      "isolation_forest": {
+       "rule": 0.14009661835748793,
+       "zscore": 0.13725490196078433,
+       "mad": 0.1285140562248996,
+       "iqr": 0.1328125,
+       "baseline_deviation": 0.134185303514377,
+       "rate_of_change": 0.058577405857740586,
+       "isolation_forest": 1.0
+      }
+     },
+     "labels_available": true
+    },
+    "performance": {
+     "aggregation_events_per_s": 50604.00028599148,
+     "detector_ms_per_window": {
+      "rule": 0.0495071889314722,
+      "zscore": 0.12099778339574661,
+      "mad": 0.20981560019193513,
+      "iqr": 0.29842780057216556,
+      "baseline_deviation": 0.1205587041974506,
+      "rate_of_change": 0.06192214790088289,
+      "isolation_forest": 7.847265142176502
+     },
+     "windows": 1048,
+     "late_dropped": 0,
+     "environment": {
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "machine": "x86_64",
+      "cpus": 1
+     }
+    },
+    "limitations": [
+     "Window-level scoring on synthetic data: results do not transfer automatically to real traffic.",
+     "Detector thresholds are defaults, not tuned per dataset; no hyper-parameter search was performed.",
+     "Performance numbers come from a single run on the stated machine and include Python overhead.",
+     "Ground truth comes from injected scenarios; scenario boundaries are idealised."
+    ],
+    "reproducibility": {
+     "experiment_id": "ex_915c95eecc67",
+     "config_sha256": "58649fd0432a8182dee9ce512d9dde37f7a8c53b1480f610547cf16eccca8249",
+     "seed": 13,
+     "software_version": "0.1.0",
+     "library_versions": {
+      "numpy": "2.4.4",
+      "sklearn": "1.8.0"
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "benchmark": "pipeline",
+ "events": 60000,
+ "environment": {
+  "python": "3.12.3",
+  "numpy": "2.4.4",
+  "cpus": 1,
+  "machine": "x86_64",
+  "system": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+  "veylstream": "0.1.0"
+ },
+ "notes": "single-process Python, SQLite, 1 broker, 1 processor thread; no network hop",
+ "fsync_per_batch_500": {
+  "ingest_events_per_s": 30714.282508299908,
+  "batch_ack_ms_p50": 15.078301500011548,
+  "batch_ack_ms_p95": 23.63093650004089,
+  "processing_events_per_s": 18367.32383905433,
+  "drained": true,
+  "late_dropped": 0,
+  "detection_ms_per_window_total": 0.14969233088196426
+ },
+ "no_fsync_per_batch_500": {
+  "ingest_events_per_s": 35780.51858498181,
+  "batch_ack_ms_p50": 12.976064499980566,
+  "batch_ack_ms_p95": 22.439680249979688,
+  "processing_events_per_s": 18118.761930900913,
+  "drained": true,
+  "late_dropped": 0,
+  "detection_ms_per_window_total": 0.15964008823571624
+ }
+}
